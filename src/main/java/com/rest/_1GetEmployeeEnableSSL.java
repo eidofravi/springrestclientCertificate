@@ -18,7 +18,7 @@ import java.util.Arrays;
  * Hello world!
  *
  */
-public class _1GetAllEmployees
+public class _1GetEmployeeEnableSSL
 {
     public static void main( String[] args )
     {
@@ -51,6 +51,7 @@ public class _1GetAllEmployees
 
         }
         SSLConnectionSocketFactory csf = new SSLConnectionSocketFactory(sslContext,new LocalHostnameVerifier());
+        //SSLConnectionSocketFactory csf = new SSLConnectionSocketFactory(sslContext);
         CloseableHttpClient httpClient = HttpClients.custom().setSSLSocketFactory(csf).build();
         HttpComponentsClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory(httpClient);
 
